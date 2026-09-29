@@ -1,0 +1,1014 @@
+{
+  "name": "Medicine Newsletter",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        880,
+        2352
+      ],
+      "id": "e27e8877-f01b-4729-814d-e430f986cf38",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "resource": "spreadsheet",
+        "title": "=أفضل أسعار الأدوية {{ $now.toFormat('yyyy-MM-dd HH:mm') }}",
+        "sheetsUi": {
+          "sheetValues": [
+            {
+              "title": "sheet1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1232,
+        2752
+      ],
+      "id": "16fc4585-36e7-45f5-bd84-76cd21d19c6d",
+      "name": "Create spreadsheet1",
+      "executeOnce": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PxyEecWByyQU7oVj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1zLQVlCQF6rnI49z_m_5erKFeIQ3bMqnSoXkH7RvC-Tw",
+          "mode": "list",
+          "cachedResultName": "Supplier_A_AlShifa",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zLQVlCQF6rnI49z_m_5erKFeIQ3bMqnSoXkH7RvC-Tw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1233612234,
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zLQVlCQF6rnI49z_m_5erKFeIQ3bMqnSoXkH7RvC-Tw/edit#gid=1233612234"
+        },
+        "options": {
+          "outputFormatting": {
+            "values": {
+              "general": "UNFORMATTED_VALUE",
+              "date": "FORMATTED_STRING"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1232,
+        1968
+      ],
+      "id": "23e55a05-851f-46fb-81d8-9c427efca7e4",
+      "name": "A - AlShifa1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PxyEecWByyQU7oVj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1E-l0KhBPEtdwOPHEPhAj-Saa46cvlQ6EMyLM4gMQbnk",
+          "mode": "list",
+          "cachedResultName": "Supplier_B_MedLine",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1E-l0KhBPEtdwOPHEPhAj-Saa46cvlQ6EMyLM4gMQbnk/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 398700675,
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1E-l0KhBPEtdwOPHEPhAj-Saa46cvlQ6EMyLM4gMQbnk/edit#gid=398700675"
+        },
+        "options": {
+          "outputFormatting": {
+            "values": {
+              "general": "UNFORMATTED_VALUE",
+              "date": "FORMATTED_STRING"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1232,
+        2160
+      ],
+      "id": "f1f5f297-3e13-46a5-a74f-af546e80362e",
+      "name": "B - MedLine1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PxyEecWByyQU7oVj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "16lEfJlbhYFtPeG236fpZsDYAtndACv6BPoreII2rFYU",
+          "mode": "list",
+          "cachedResultName": "Supplier_C_CarePlus",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16lEfJlbhYFtPeG236fpZsDYAtndACv6BPoreII2rFYU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1477202227,
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16lEfJlbhYFtPeG236fpZsDYAtndACv6BPoreII2rFYU/edit#gid=1477202227"
+        },
+        "options": {
+          "outputFormatting": {
+            "values": {
+              "general": "UNFORMATTED_VALUE",
+              "date": "FORMATTED_STRING"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1232,
+        2352
+      ],
+      "id": "80782d11-a793-432c-ac7f-eeebf685b36f",
+      "name": "C - CarePlus1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PxyEecWByyQU7oVj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1S_KDONtvogm3rHZt4l6d7gTsLvZ8R-n-DSRScfxSEfA",
+          "mode": "list",
+          "cachedResultName": "Supplier_D_PharmaSource",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1S_KDONtvogm3rHZt4l6d7gTsLvZ8R-n-DSRScfxSEfA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1697948782,
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1S_KDONtvogm3rHZt4l6d7gTsLvZ8R-n-DSRScfxSEfA/edit#gid=1697948782"
+        },
+        "options": {
+          "outputFormatting": {
+            "values": {
+              "general": "UNFORMATTED_VALUE",
+              "date": "FORMATTED_STRING"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1232,
+        2544
+      ],
+      "id": "2392d331-bd9e-4658-852c-16ef9628fe02",
+      "name": "D - PharmaSource1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PxyEecWByyQU7oVj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "numberInputs": 4
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1760,
+        2192
+      ],
+      "id": "146221f1-3e2a-4213-84d2-41191fd059bf",
+      "name": "دمج الموردين1"
+    },
+    {
+      "parameters": {
+        "jsCode": "// ========================================================\n// Medicine Normalization\n// n8n Code Node\n// Mode: Run Once for All Items\n// ========================================================\n\n// --------------------------------------------------------\n// 0. توحيد أسماء الأعمدة لكل مورد (بدل نودز Edit Fields)\n//    المورد يُعرف تلقائياً من أعمدة الشيت\n// --------------------------------------------------------\n\nconst SUPPLIERS = [\n  {\n    supplier: 'AlShifa',\n    columns: {\n      code: 'Item Code', name: 'Product Name', dose: 'Strength',\n      form: 'Dosage Form', package: 'Pack', quantity: 'Qty',\n      price: 'Price', brand: 'Manufacturer', barcode: 'Barcode'\n    }\n  },\n  {\n    supplier: 'MedLine',\n    columns: {\n      code: 'SKU', name: 'Medicine', dose: 'Dose',\n      form: 'Form Type', package: 'Package', quantity: 'Stock',\n      price: 'Unit Price', brand: 'MFR', barcode: 'GTIN'\n    }\n  },\n  {\n    supplier: 'CarePlus',\n    columns: {\n      code: 'Code', name: 'Trade Name', dose: 'Concentration',\n      form: 'Form', package: 'Pack Size', quantity: 'Available',\n      price: 'Cost', brand: 'Company', barcode: 'Barcode No'\n    }\n  },\n  {\n    supplier: 'PharmaSource',\n    columns: {\n      code: 'Product_ID', name: 'Description', dose: 'Power',\n      form: 'Dosage', package: 'Box', quantity: 'On Hand',\n      price: 'Net Cost', brand: 'Brand Owner', barcode: 'EAN'\n    }\n  }\n];\n\nconst headerKey = h => String(h).trim().toLowerCase().replace(/[\\s_]+/g, ' ');\n\nconst UNIFIED = ['code', 'name', 'dose', 'form', 'package', 'quantity', 'price', 'brand', 'barcode', 'supplier'];\n\nfunction mapRow(raw) {\n\n  // الصف موحد مسبقاً (جاي من نود Edit Fields) => نمرره كما هو\n  const unifiedHits = UNIFIED.filter(f => f in raw).length;\n  if (unifiedHits >= 8) {\n    const out = {};\n    for (const f of UNIFIED) out[f] = f in raw ? raw[f] : '';\n    return out;\n  }\n\n  // فهرس الأعمدة بعد تنظيف الأسماء (مسافات / حالة الأحرف)\n  const index = {};\n  for (const k of Object.keys(raw)) index[headerKey(k)] = k;\n\n  // المورد = اللي كل أعمدته موجودة، والأكثر تطابقاً\n  let best = null;\n  let bestHits = 0;\n  for (const s of SUPPLIERS) {\n    const hits = Object.values(s.columns).filter(c => headerKey(c) in index).length;\n    if (hits > bestHits) { best = s; bestHits = hits; }\n  }\n\n  if (!best || bestHits < 7) {\n    return {\n      code: '', name: '', dose: '', form: '', package: '',\n      quantity: 0, price: null, brand: '', barcode: '',\n      supplier: 'Unknown',\n      _mapError: `أعمدة غير معروفة: ${Object.keys(raw).join(', ')}`\n    };\n  }\n\n  const out = { supplier: best.supplier };\n  for (const [field, col] of Object.entries(best.columns)) {\n    const key = index[headerKey(col)];\n    out[field] = key === undefined ? '' : raw[key];\n  }\n  return out;\n}\n\nconst inputItems = $input.all()\n  .filter(item => item.json && Object.keys(item.json).length)\n  .map(item => ({ json: mapRow(item.json) }));\n\n\n// --------------------------------------------------------\n// 1. Basic helpers\n// --------------------------------------------------------\n\nfunction rawString(value) {\n  if (value === null || value === undefined) return '';\n\n  return String(value)\n    .normalize('NFKC')\n    .trim();\n}\n\n\nfunction cleanText(value) {\n  return rawString(value)\n    .toLowerCase()\n    .replace(/[–—−]/g, '-')\n    .replace(/[_.]+/g, ' ')\n    .replace(/[-]+/g, ' ')\n    .replace(/[()\\[\\]{},;:]/g, ' ')\n    .replace(/\\s+/g, ' ')\n    .trim();\n}\n\n\nfunction formatNumber(n) {\n  if (!Number.isFinite(n)) return '';\n\n  const rounded =\n    Math.round((n + Number.EPSILON) * 1000000) / 1000000;\n\n  return Number.isInteger(rounded)\n    ? String(rounded)\n    : String(rounded)\n        .replace(/0+$/, '')\n        .replace(/\\.$/, '');\n}\n\n\n// --------------------------------------------------------\n// 2. Dose normalization\n// --------------------------------------------------------\n\nfunction toMg(value, unit) {\n\n  const n = Number(\n    String(value).replace(',', '.')\n  );\n\n  if (!Number.isFinite(n)) {\n    return null;\n  }\n\n  const u = unit.toLowerCase();\n\n  // gram -> mg\n  if (u === 'g' || u === 'gm') {\n    return n * 1000;\n  }\n\n  // microgram -> mg\n  if (\n    u === 'mcg' ||\n    u === 'ug' ||\n    u === 'µg' ||\n    u === 'μg'\n  ) {\n    return n / 1000;\n  }\n\n  // already mg\n  if (u === 'mg') {\n    return n;\n  }\n\n  return null;\n}\n\n\nfunction normalizeDose(value) {\n\n  let s = rawString(value)\n    .toLowerCase()\n    .replace(/,/g, '.')\n    .replace(/micrograms?/g, 'mcg')\n    .replace(/mcgs?/g, 'mcg')\n    .replace(/[µμ]g/g, 'mcg')\n    .replace(/milligrams?/g, 'mg')\n    .replace(/mgs?/g, 'mg')\n    .replace(/grams?/g, 'g')\n    .replace(/gms?/g, 'gm')\n    .replace(/\\s+/g, ' ')\n    .trim();\n\n\n  if (!s) {\n    return '';\n  }\n\n\n  // --------------------------------\n  // Combination strength\n  //\n  // Example:\n  // 875 mg / 125 mg\n  // --------------------------------\n\n  const combo = s.match(\n    /(\\d+(?:\\.\\d+)?)\\s*(mcg|ug|mg|gm|g)?\\s*[\\/+]\\s*(\\d+(?:\\.\\d+)?)\\s*(mcg|ug|mg|gm|g)\\b/\n  );\n\n\n  if (combo) {\n\n    const unit2 = combo[4];\n    const unit1 = combo[2] || unit2;\n\n    const a = toMg(combo[1], unit1);\n    const b = toMg(combo[3], unit2);\n\n    if (a !== null && b !== null) {\n\n      return (\n        `${formatNumber(a)} mg / ` +\n        `${formatNumber(b)} mg`\n      );\n    }\n  }\n\n\n  // --------------------------------\n  // Normal single strength\n  // --------------------------------\n\n  const match = s.match(\n    /(\\d+(?:\\.\\d+)?)\\s*(mcg|ug|mg|gm|g)\\b/\n  );\n\n\n  if (!match) {\n    return cleanText(s);\n  }\n\n\n  const mg = toMg(\n    match[1],\n    match[2]\n  );\n\n\n  if (mg === null) {\n    return cleanText(s);\n  }\n\n\n  return `${formatNumber(mg)} mg`;\n}\n\n\n// --------------------------------------------------------\n// 3. Numbers belonging to dose\n//\n// Needed because suppliers sometimes put dose\n// inside medicine name.\n//\n// Example:\n//\n// Brufen 400\n// Losec 20\n// Augmentin 1000\n//\n// --------------------------------------------------------\n\nfunction doseNumbers(originalDose, normalizedDose) {\n\n  const result = new Set();\n\n  const original =\n    rawString(originalDose)\n      .replace(/,/g, '.');\n\n  const normalized =\n    rawString(normalizedDose)\n      .replace(/,/g, '.');\n\n\n  for (\n    const match of\n    original.matchAll(/\\d+(?:\\.\\d+)?/g)\n  ) {\n\n    result.add(\n      formatNumber(Number(match[0]))\n    );\n  }\n\n\n  for (\n    const match of\n    normalized.matchAll(/\\d+(?:\\.\\d+)?/g)\n  ) {\n\n    result.add(\n      formatNumber(Number(match[0]))\n    );\n  }\n\n\n  return result;\n}\n\n\n// --------------------------------------------------------\n// 4. Medicine name normalization\n// --------------------------------------------------------\n\nfunction normalizeName(\n  value,\n  originalDose,\n  normalizedDose\n) {\n\n  let s = cleanText(value);\n\n  if (!s) {\n    return '';\n  }\n\n\n  // --------------------------------\n  // Remove explicit doses\n  //\n  // Augmentin 1g\n  // Amoxil 500mg\n  // --------------------------------\n\n  s = s\n    .replace(\n      /\\b\\d+(?:\\.\\d+)?\\s*(?:mcg|ug|µg|μg|mg|gm|g)\\b/g,\n      ' '\n    )\n    .replace(/\\s+/g, ' ')\n    .trim();\n\n\n  // --------------------------------\n  // Remove standalone number\n  // ONLY if it belongs to dose.\n  //\n  // Brufen 400 + 400mg\n  // => Brufen\n  //\n  // This is safer than removing\n  // every number from every name.\n  // --------------------------------\n\n  const numbers = doseNumbers(\n    originalDose,\n    normalizedDose\n  );\n\n\n  s = s\n    .split(' ')\n    .filter(token => {\n\n      if (\n        !/^\\d+(?:\\.\\d+)?$/.test(token)\n      ) {\n        return true;\n      }\n\n      return !numbers.has(\n        formatNumber(Number(token))\n      );\n    })\n    .join(' ');\n\n\n  // --------------------------------\n  // Remove dosage form words when\n  // suppliers append them to name.\n  //\n  // Amoxil Caps\n  // Zyrtec Tabs\n  // Ventolin Evohaler\n  // --------------------------------\n\n  const removable = new Set([\n    'tab',\n    'tabs',\n    'tablet',\n    'tablets',\n\n    'cap',\n    'caps',\n    'capsule',\n    'capsules',\n\n    'inhaler',\n    'inhalers',\n    'evohaler'\n  ]);\n\n\n  s = s\n    .split(' ')\n    .filter(\n      token => !removable.has(token)\n    )\n    .join(' ')\n    .replace(/\\s+/g, ' ')\n    .trim();\n\n\n  return s;\n}\n\n\n// --------------------------------------------------------\n// 5. Dosage form normalization\n// --------------------------------------------------------\n\nfunction normalizeForm(value) {\n\n  const s = cleanText(value);\n\n  if (!s) {\n    return '';\n  }\n\n\n  // IMPORTANT:\n  // Specific forms before generic forms.\n\n  if (\n    /efferv/.test(s) &&\n    /\\b(tab|tabs|tablet|tablets)\\b/.test(s)\n  ) {\n    return 'effervescent tablet';\n  }\n\n\n  if (\n    /inhal|evohaler|metered dose/.test(s)\n  ) {\n    return 'inhaler';\n  }\n\n\n  if (\n    /\\b(tab|tabs|tablet|tablets)\\b/.test(s)\n  ) {\n    return 'tablet';\n  }\n\n\n  if (\n    /\\b(cap|caps|capsule|capsules)\\b/.test(s)\n  ) {\n    return 'capsule';\n  }\n\n\n  if (\n    /\\b(syrup|syr)\\b/.test(s)\n  ) {\n    return 'syrup';\n  }\n\n\n  if (\n    /suspension|\\bsusp\\b/.test(s)\n  ) {\n    return 'suspension';\n  }\n\n\n  if (/cream/.test(s)) {\n    return 'cream';\n  }\n\n\n  if (\n    /ointment|\\boint\\b/.test(s)\n  ) {\n    return 'ointment';\n  }\n\n\n  if (\n    /injection|injectable|\\binj\\b/.test(s)\n  ) {\n    return 'injection';\n  }\n\n\n  if (/drops?/.test(s)) {\n    return 'drops';\n  }\n\n\n  return s;\n}\n\n\n// --------------------------------------------------------\n// 6. Package normalization\n// --------------------------------------------------------\n\nfunction normalizePackage(value) {\n\n  const s = cleanText(value)\n\n    .replace(/box of/g, ' ')\n\n    .replace(/boxes?\\b/g, ' ')\n\n    .replace(/packs?\\b/g, ' ')\n\n    .replace(/['’]s\\b/g, ' ')\n\n    .replace(/\\s+/g, ' ')\n\n    .trim();\n\n\n  if (!s) {\n    return '';\n  }\n\n\n  // --------------------------------\n  // Example:\n  // 2 x 14\n  // => 28\n  // --------------------------------\n\n  const multiplication =\n    s.match(\n      /\\b(\\d+)\\s*[x×]\\s*(\\d+)\\b/\n    );\n\n\n  if (multiplication) {\n\n    return String(\n      Number(multiplication[1]) *\n      Number(multiplication[2])\n    );\n  }\n\n\n  // --------------------------------\n  // Examples:\n  //\n  // 24 Tabs\n  // BOX 24\n  // 20'S\n  // 200 PUFFS\n  //\n  // => only package count\n  // --------------------------------\n\n  const firstNumber =\n    s.match(/\\b\\d+\\b/);\n\n\n  if (firstNumber) {\n\n    return String(\n      Number(firstNumber[0])\n    );\n  }\n\n\n  return s;\n}\n\n\n// --------------------------------------------------------\n// 7. Manufacturer normalization\n// --------------------------------------------------------\n\nfunction normalizeBrand(value) {\n\n  const s = cleanText(value);\n\n  if (!s) {\n    return '';\n  }\n\n\n  // Ignore:\n  // case\n  // spaces\n  // punctuation\n\n  return s.replace(\n    /[^a-z0-9]/g,\n    ''\n  );\n}\n\n\n// --------------------------------------------------------\n// Display manufacturer nicely\n// --------------------------------------------------------\n\nfunction displayBrand(\n  brandKey,\n  originalBrand\n) {\n\n  const known = {\n\n    haleon: 'Haleon',\n\n    gsk: 'GSK',\n\n    abbott: 'Abbott',\n\n    astrazeneca: 'AstraZeneca',\n\n    merck: 'Merck',\n\n    pfizer: 'Pfizer',\n\n    msd: 'MSD',\n\n    ucb: 'UCB',\n\n    demopharma: 'Demo Pharma',\n\n    newcare: 'NewCare'\n  };\n\n\n  return (\n    known[brandKey] ||\n    rawString(originalBrand)\n      .replace(/\\s+/g, ' ')\n      .trim()\n  );\n}\n\n\n// --------------------------------------------------------\n// 8. Barcode normalization\n// --------------------------------------------------------\n\nfunction normalizeBarcode(value) {\n\n  if (value === null || value === undefined) return '';\n\n  // رقم حقيقي (Google Sheets UNFORMATTED_VALUE)\n  if (typeof value === 'number') {\n    if (!Number.isSafeInteger(value) || value <= 0) return '';\n    const digits = String(value);\n    return digits.length >= 8 && digits.length <= 14 ? digits : '';\n  }\n\n  let s = rawString(value);\n  if (!s) return '';\n\n  // صيغة علمية مثل 6.29E+12 => الأرقام ضاعت، لا نثق بها\n  if (/e[+-]?\\d+/i.test(s)) return '';\n\n  // 6291001000011.0 => 6291001000011\n  s = s.replace(/\\.0+$/, '');\n\n  const digits = s.replace(/\\D/g, '');\n\n  // باركود صالح: 8 إلى 14 رقم (EAN-8 / UPC / EAN-13 / GTIN-14)\n  return digits.length >= 8 && digits.length <= 14 ? digits : '';\n}\n\n\n// --------------------------------------------------------\n// Display medicine name\n// --------------------------------------------------------\n\nfunction titleCase(value) {\n\n  return rawString(value)\n    .toLowerCase()\n    .replace(\n      /\\b\\w/g,\n      c => c.toUpperCase()\n    );\n}\n\n\n// --------------------------------------------------------\n// Compare core medicine fields\n// --------------------------------------------------------\n\nfunction sameCore(\n  a,\n  b,\n  ignoreDose = false\n) {\n\n  if (\n    !a.normalizedName ||\n    !b.normalizedName ||\n    a.normalizedName !==\n    b.normalizedName\n  ) {\n    return false;\n  }\n\n\n  if (\n    a.normalizedForm &&\n    b.normalizedForm &&\n    a.normalizedForm !==\n    b.normalizedForm\n  ) {\n    return false;\n  }\n\n\n  if (\n    a.normalizedPackage &&\n    b.normalizedPackage &&\n    a.normalizedPackage !==\n    b.normalizedPackage\n  ) {\n    return false;\n  }\n\n\n  if (\n    a.normalizedBrandKey &&\n    b.normalizedBrandKey &&\n    a.normalizedBrandKey !==\n    b.normalizedBrandKey\n  ) {\n    return false;\n  }\n\n\n  if (\n    !ignoreDose &&\n    a.normalizedDose &&\n    b.normalizedDose &&\n    a.normalizedDose !==\n    b.normalizedDose\n  ) {\n    return false;\n  }\n\n\n  return true;\n}\n\n\n// --------------------------------------------------------\n// Numbers (price / quantity)\n// --------------------------------------------------------\n\nfunction parseNumber(value) {\n  if (typeof value === 'number') return Number.isFinite(value) ? value : null;\n  const s = rawString(value).replace(/[^\\d.,-]/g, '').replace(',', '.');\n  if (!s) return null;\n  const n = Number(s);\n  return Number.isFinite(n) ? n : null;\n}\n\n\nfunction titleForm(value) {\n  return rawString(value).replace(/\\b\\w/g, c => c.toUpperCase());\n}\n\n\n// 0.1 mg => 100 mcg (للعرض فقط، المطابقة تبقى بالـ mg)\nfunction displayDose(dose) {\n  return rawString(dose).replace(/(\\d+(?:\\.\\d+)?) mg/g, (m, n) => {\n    const v = Number(n);\n    return v > 0 && v < 1 ? `${formatNumber(v * 1000)} mcg` : m;\n  });\n}\n\n\nfunction mostCommon(values) {\n  const counts = new Map();\n  for (const v of values) {\n    if (!v) continue;\n    counts.set(v, (counts.get(v) || 0) + 1);\n  }\n  let best = '';\n  let bestCount = 0;\n  for (const [v, c] of counts) {\n    if (c > bestCount) { best = v; bestCount = c; }\n  }\n  return best;\n}\n\n\n// ========================================================\n// 9. Normalize every input item (unified schema)\n// ========================================================\n\nconst UNIFIED_FIELDS = [\n  'code', 'name', 'dose', 'form', 'package',\n  'quantity', 'price', 'brand', 'barcode', 'supplier'\n];\n\nconst rows = inputItems.map((item, index) => {\n\n  const j = item.json || {};\n\n  // تأكد أن كل الحقول الموحدة موجودة\n  const missing = UNIFIED_FIELDS.filter(f => !(f in j));\n\n  const normalizedDose = normalizeDose(j.dose);\n  const normalizedName = normalizeName(j.name, j.dose, normalizedDose);\n  const normalizedBrandKey = normalizeBrand(j.brand);\n\n  const price = parseNumber(j.price);\n  const quantityRaw = parseNumber(j.quantity);\n  const quantity = quantityRaw === null ? 0 : Math.max(0, quantityRaw);\n\n  const notes = [];\n  if (missing.length) notes.push(`حقول ناقصة: ${missing.join(', ')}`);\n  if (j._mapError) notes.push(j._mapError);\n  if (price === null || price <= 0) notes.push('سعر غير صالح');\n  if (rawString(j.barcode) && !normalizeBarcode(j.barcode)) notes.push('باركود غير صالح');\n\n  return {\n    supplier: rawString(j.supplier),\n    supplierCode: rawString(j.code),\n    originalName: rawString(j.name),\n    price,\n    quantity,\n\n    normalizedName,\n    normalizedDose,\n    normalizedForm: normalizeForm(j.form),\n    normalizedPackage: normalizePackage(j.package),\n    normalizedBrandKey,\n    normalizedBrand: displayBrand(normalizedBrandKey, j.brand),\n    normalizedBarcode: normalizeBarcode(j.barcode),\n\n    doseInferred: false,\n    matchMethod: '',\n    matchConfidence: '',\n    matchKey: '',\n    notes,\n    _inputIndex: index\n  };\n});\n\n\n// ========================================================\n// 10. Matching priority #1 : Barcode / GTIN / EAN\n// ========================================================\n\nfor (const row of rows) {\n  if (row.normalizedBarcode) {\n    row.matchKey = `gtin:${row.normalizedBarcode}`;\n    row.matchMethod = 'barcode';\n    row.matchConfidence = 'very-high';\n  }\n}\n\n\n// ========================================================\n// 11. Matching priority #2 : infer barcode from fields\n// ========================================================\n\nconst knownBarcodeRows = rows.filter(row => row.normalizedBarcode);\n\nfor (const row of rows) {\n\n  if (row.matchKey) continue;\n\n  const ignoreDose = !row.normalizedDose;\n\n  const candidates = knownBarcodeRows.filter(\n    candidate => sameCore(row, candidate, ignoreDose)\n  );\n\n  const uniqueBarcodes = [\n    ...new Set(candidates.map(c => c.normalizedBarcode).filter(Boolean))\n  ];\n\n  if (uniqueBarcodes.length === 1) {\n\n    row.matchKey = `gtin:${uniqueBarcodes[0]}`;\n    row.matchMethod = ignoreDose ? 'unique-core-inference' : 'normalized-fields-to-barcode';\n    row.matchConfidence = ignoreDose ? 'medium' : 'high';\n\n    if (!row.normalizedDose) {\n      const doses = [...new Set(candidates.map(c => c.normalizedDose).filter(Boolean))];\n      if (doses.length === 1) {\n        row.normalizedDose = doses[0];\n        row.doseInferred = true;\n        row.notes.push('الجرعة مستنتجة من الباركود');\n      }\n    }\n  }\n}\n\n\n// ========================================================\n// 12. Fallback : composite key\n// ========================================================\n\nfor (const row of rows) {\n  if (!row.matchKey) {\n    row.matchKey = 'cmp:' + [\n      row.normalizedName,\n      row.normalizedDose,\n      row.normalizedForm,\n      row.normalizedPackage,\n      row.normalizedBrandKey\n    ].join('|');\n    row.matchMethod = 'composite-key';\n    row.matchConfidence = 'normal';\n  }\n}\n\n\n// ========================================================\n// 13. Canonical values per product\n//\n// كل الصفوف التي تخص نفس المنتج تأخذ نفس القيم الموحدة\n// (الأكثر تكراراً) حتى يطلع عمود medicine متطابق حرفياً.\n// ========================================================\n\nconst groups = new Map();\nfor (const row of rows) {\n  if (!groups.has(row.matchKey)) groups.set(row.matchKey, []);\n  groups.get(row.matchKey).push(row);\n}\n\nfor (const members of groups.values()) {\n\n  const canonical = {\n    name: mostCommon(members.map(r => r.normalizedName)),\n    dose: mostCommon(members.map(r => r.normalizedDose)),\n    doseDisplay: '',\n    form: mostCommon(members.map(r => r.normalizedForm)),\n    pack: mostCommon(members.map(r => r.normalizedPackage)),\n    brand: mostCommon(members.map(r => r.normalizedBrand)),\n    barcode: mostCommon(members.map(r => r.normalizedBarcode)),\n  };\n\n  // عمود واحد يجمع كل معلومات الدواء — هو أساس المقارنة\n  const medicine = [\n    titleCase(canonical.name),\n    displayDose(canonical.dose),\n    titleForm(canonical.form),\n    canonical.pack ? `${canonical.pack} units` : '',\n    canonical.brand\n  ].filter(Boolean).join(' | ');\n\n  canonical.doseDisplay = displayDose(canonical.dose);\n\n  for (const row of members) {\n    row.medicine = medicine;\n    row.canonical = canonical;\n  }\n}\n\n\n// ========================================================\n// 14. Return to n8n\n// ========================================================\n\nreturn rows.map(({ _inputIndex, notes, ...json }) => ({\n  json: { ...json, notes: notes.join(' ; ') }\n}));\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1952,
+        2224
+      ],
+      "id": "92715539-da7d-4e8f-bbe1-bba1f78860f1",
+      "name": "توحيد البيانات1"
+    },
+    {
+      "parameters": {
+        "jsCode": "// ========================================================\n// Best price per medicine\n// Mode: Run Once for All Items\n//\n// المقارنة على عمود واحد: medicine\n// ========================================================\n\nconst rows = $input.all().map(i => i.json);\n\nconst round2 = n => Math.round((n + Number.EPSILON) * 100) / 100;\n\n\n// --------------------------------------------------------\n// 1. تجميع حسب عمود medicine\n// --------------------------------------------------------\n\nconst groups = new Map();\nfor (const r of rows) {\n  if (!r.medicine) continue;\n  if (!groups.has(r.medicine)) groups.set(r.medicine, []);\n  groups.get(r.medicine).push(r);\n}\n\n\nconst output = [];\n\nfor (const [medicine, members] of groups) {\n\n  const notes = new Set();\n\n  // --------------------------------------------------------\n  // 2. إزالة التكرار داخل نفس المورد\n  //    (نفس الدواء مكرر عند مورد واحد => نأخذ أرخص عرض صالح)\n  // --------------------------------------------------------\n\n  const bySupplier = new Map();\n  for (const r of members) {\n    if (r.notes) r.notes.split(' ; ').forEach(n => n && notes.add(`${r.supplier}: ${n}`));\n    if (r.price === null || r.price <= 0) continue;\n\n    const prev = bySupplier.get(r.supplier);\n    if (prev) {\n      notes.add(\n        prev.supplierCode === r.supplierCode\n          ? `${r.supplier}: صف مكرر (${r.supplierCode})`\n          : `${r.supplier}: عرضان لنفس الدواء (${prev.supplierCode}, ${r.supplierCode})`\n      );\n      const better =\n        (r.quantity > 0 && prev.quantity === 0) ||\n        ((r.quantity > 0) === (prev.quantity > 0) && r.price < prev.price);\n      if (!better) continue;\n    }\n    bySupplier.set(r.supplier, r);\n  }\n\n  const offers = [...bySupplier.values()].sort((a, b) => a.price - b.price);\n  const inStock = offers.filter(o => o.quantity > 0);\n\n\n  // --------------------------------------------------------\n  // 3. أفضل سعر = أقل سعر عند مورد عنده مخزون\n  // --------------------------------------------------------\n\n  let best = null;\n  let bestSuppliers = [];\n\n  if (inStock.length) {\n    const minPrice = inStock[0].price;\n    const tied = inStock.filter(o => o.price === minPrice);\n    // عند التعادل: الأكثر مخزوناً أولاً\n    tied.sort((a, b) => b.quantity - a.quantity);\n    best = tied[0];\n    bestSuppliers = tied.map(o => o.supplier);\n  }\n\n  const cheapestListed = offers[0];\n  if (cheapestListed && best && cheapestListed.price < best.price) {\n    notes.add(`أرخص سعر عند ${cheapestListed.supplier} (${cheapestListed.price}) لكن المخزون صفر`);\n  }\n\n  const highest = inStock.length ? inStock[inStock.length - 1].price : null;\n  const c = members[0].canonical || {};\n\n  output.push({\n    json: {\n      medicine,\n      barcode: c.barcode || '',\n      name: members[0].medicine.split(' | ')[0],\n      dose: c.doseDisplay || c.dose || '',\n      form: c.form || '',\n      pack_size: c.pack || '',\n      manufacturer: c.brand || '',\n\n      status: best ? 'متوفر' : 'غير متوفر لدى أي مورد',\n      best_price: best ? best.price : '',\n      best_supplier: bestSuppliers.join(', '),\n      best_supplier_sku: best ? best.supplierCode : '',\n      best_supplier_stock: best ? best.quantity : 0,\n\n      highest_price_in_stock: highest ?? '',\n      saving_vs_highest: best && highest !== null ? round2(highest - best.price) : '',\n      suppliers_in_stock: inStock.length,\n      total_stock: inStock.reduce((s, o) => s + o.quantity, 0),\n\n      all_offers: offers\n        .map(o => `${o.supplier}: ${o.price}${o.quantity > 0 ? ` (${o.quantity})` : ' (نفد)'}`)\n        .join(' | '),\n\n      match_method: [...new Set(members.map(m => m.matchMethod))].join(', '),\n      notes: [...notes].join(' ; ')\n    }\n  });\n}\n\noutput.sort((a, b) => a.json.medicine.localeCompare(b.json.medicine));\n\nreturn output;\n"
+      },
+      "id": "ad9c5d71-c550-4d96-9780-bf6a98f27592",
+      "name": "أفضل سعر1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2112,
+        2224
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Create spreadsheet1').first().json.spreadsheetId }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "sheet1"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {
+            "medicine": "={{ $json.medicine }}",
+            "barcode": "={{ $json.barcode }}",
+            "name": "={{ $json.name }}",
+            "dose": "={{ $json.dose }}",
+            "form": "={{ $json.form }}",
+            "pack_size": "={{ $json.pack_size }}",
+            "manufacturer": "={{ $json.manufacturer }}",
+            "status": "={{ $json.status }}",
+            "best_price": "={{ $json.best_price }}",
+            "best_supplier": "={{ $json.best_supplier }}",
+            "total_stock": "={{ $json.total_stock }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "spreadsheetId",
+              "displayName": "spreadsheetId",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "properties",
+              "displayName": "properties",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "sheets",
+              "displayName": "sheets",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "spreadsheetUrl",
+              "displayName": "spreadsheetUrl",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "medicine",
+              "displayName": "medicine",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "barcode",
+              "displayName": "barcode",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "dose",
+              "displayName": "dose",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "form",
+              "displayName": "form",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "pack_size",
+              "displayName": "pack_size",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "manufacturer",
+              "displayName": "manufacturer",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "best_price",
+              "displayName": "best_price",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "best_supplier",
+              "displayName": "best_supplier",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "best_supplier_sku",
+              "displayName": "best_supplier_sku",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "best_supplier_stock",
+              "displayName": "best_supplier_stock",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "highest_price_in_stock",
+              "displayName": "highest_price_in_stock",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "saving_vs_highest",
+              "displayName": "saving_vs_highest",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "suppliers_in_stock",
+              "displayName": "suppliers_in_stock",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "total_stock",
+              "displayName": "total_stock",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "all_offers",
+              "displayName": "all_offers",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "match_method",
+              "displayName": "match_method",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "notes",
+              "displayName": "notes",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {
+          "cellFormat": "RAW"
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        2352,
+        2240
+      ],
+      "id": "939a5e9b-cfc8-4b90-bf70-8cd723a780a6",
+      "name": "كتابة النتائج1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PxyEecWByyQU7oVj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "776195e8-dad3-491f-b03b-adb4f63f69af",
+              "name": "code",
+              "value": "={{ $json['Item Code'] }}",
+              "type": "string"
+            },
+            {
+              "id": "c41f248d-16b2-42d0-b848-9479f8c36392",
+              "name": "name",
+              "value": "={{ $json['Product Name'] }}",
+              "type": "string"
+            },
+            {
+              "id": "5cab78b8-d8f1-4e94-9947-3b1a2511383d",
+              "name": "dose",
+              "value": "={{ $json.Strength }}",
+              "type": "string"
+            },
+            {
+              "id": "0921fc27-18a0-4d7a-998b-d826eceae1bc",
+              "name": "form",
+              "value": "={{ $json['Dosage Form'] }}",
+              "type": "string"
+            },
+            {
+              "id": "865a3ddd-9948-4b09-b50e-86fdf08f3646",
+              "name": "package",
+              "value": "={{ $json.Pack }}",
+              "type": "string"
+            },
+            {
+              "id": "396bbec8-6070-4f77-9a2c-0bb77652f945",
+              "name": "quantity",
+              "value": "={{ $json.Qty }}",
+              "type": "number"
+            },
+            {
+              "id": "61b458a7-fc99-47fa-8a5a-d34dedccf73f",
+              "name": "price",
+              "value": "={{ $json.Price }}",
+              "type": "number"
+            },
+            {
+              "id": "c7e5a09c-93e2-4fdd-9d9e-106264d5a408",
+              "name": "brand",
+              "value": "={{ $json.Manufacturer }}",
+              "type": "string"
+            },
+            {
+              "id": "08f3ce3c-908e-4b94-88e5-2c742b8a5834",
+              "name": "barcode",
+              "value": "={{ $json.Barcode }}",
+              "type": "string"
+            },
+            {
+              "id": "eb696508-743e-436b-a3d3-af8a0148621c",
+              "name": "supplier",
+              "value": "A - AlShifa",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1440,
+        1968
+      ],
+      "id": "75627cfa-25d3-4ee7-af60-5627f3182c11",
+      "name": "Edit Fields4"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "776195e8-dad3-491f-b03b-adb4f63f69af",
+              "name": "code",
+              "value": "={{ $json.SKU }}",
+              "type": "string"
+            },
+            {
+              "id": "c41f248d-16b2-42d0-b848-9479f8c36392",
+              "name": "name",
+              "value": "={{ $json.Medicine }}",
+              "type": "string"
+            },
+            {
+              "id": "5cab78b8-d8f1-4e94-9947-3b1a2511383d",
+              "name": "dose",
+              "value": "={{ $json.Dose }}",
+              "type": "string"
+            },
+            {
+              "id": "0921fc27-18a0-4d7a-998b-d826eceae1bc",
+              "name": "form",
+              "value": "={{ $json['Form Type'] }}",
+              "type": "string"
+            },
+            {
+              "id": "865a3ddd-9948-4b09-b50e-86fdf08f3646",
+              "name": "package",
+              "value": "={{ $json.Package }}",
+              "type": "string"
+            },
+            {
+              "id": "396bbec8-6070-4f77-9a2c-0bb77652f945",
+              "name": "quantity",
+              "value": "={{ $json.Stock }}",
+              "type": "number"
+            },
+            {
+              "id": "61b458a7-fc99-47fa-8a5a-d34dedccf73f",
+              "name": "price",
+              "value": "={{ $json['Unit Price'] }}",
+              "type": "number"
+            },
+            {
+              "id": "c7e5a09c-93e2-4fdd-9d9e-106264d5a408",
+              "name": "brand",
+              "value": "={{ $json.MFR }}",
+              "type": "string"
+            },
+            {
+              "id": "08f3ce3c-908e-4b94-88e5-2c742b8a5834",
+              "name": "barcode",
+              "value": "={{ $json.GTIN }}",
+              "type": "string"
+            },
+            {
+              "id": "eb696508-743e-436b-a3d3-af8a0148621c",
+              "name": "supplier",
+              "value": "B - MedLine",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1440,
+        2160
+      ],
+      "id": "9846473d-2099-4529-b9f3-23b127a3e543",
+      "name": "Edit Fields5"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "776195e8-dad3-491f-b03b-adb4f63f69af",
+              "name": "code",
+              "value": "={{ $json.Code }}",
+              "type": "string"
+            },
+            {
+              "id": "c41f248d-16b2-42d0-b848-9479f8c36392",
+              "name": "name",
+              "value": "={{ $json['Trade Name'] }}",
+              "type": "string"
+            },
+            {
+              "id": "5cab78b8-d8f1-4e94-9947-3b1a2511383d",
+              "name": "dose",
+              "value": "={{ $json.Concentration }}",
+              "type": "string"
+            },
+            {
+              "id": "0921fc27-18a0-4d7a-998b-d826eceae1bc",
+              "name": "form",
+              "value": "={{ $json.Form }}",
+              "type": "string"
+            },
+            {
+              "id": "865a3ddd-9948-4b09-b50e-86fdf08f3646",
+              "name": "package",
+              "value": "={{ $json['Pack Size'] }}",
+              "type": "string"
+            },
+            {
+              "id": "396bbec8-6070-4f77-9a2c-0bb77652f945",
+              "name": "quantity",
+              "value": "={{ $json.Available }}",
+              "type": "number"
+            },
+            {
+              "id": "61b458a7-fc99-47fa-8a5a-d34dedccf73f",
+              "name": "price",
+              "value": "={{ $json.Cost }}",
+              "type": "number"
+            },
+            {
+              "id": "c7e5a09c-93e2-4fdd-9d9e-106264d5a408",
+              "name": "brand",
+              "value": "={{ $json.Company }}",
+              "type": "string"
+            },
+            {
+              "id": "08f3ce3c-908e-4b94-88e5-2c742b8a5834",
+              "name": "barcode",
+              "value": "={{ $json['Barcode No'] }}",
+              "type": "string"
+            },
+            {
+              "id": "eb696508-743e-436b-a3d3-af8a0148621c",
+              "name": "supplier",
+              "value": "C - CarePlus",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1440,
+        2352
+      ],
+      "id": "09636adf-5d69-4f66-ad2a-38e62e821e6c",
+      "name": "Edit Fields6"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "776195e8-dad3-491f-b03b-adb4f63f69af",
+              "name": "code",
+              "value": "={{ $json.Product_ID }}",
+              "type": "string"
+            },
+            {
+              "id": "c41f248d-16b2-42d0-b848-9479f8c36392",
+              "name": "name",
+              "value": "={{ $json.Description }}",
+              "type": "string"
+            },
+            {
+              "id": "5cab78b8-d8f1-4e94-9947-3b1a2511383d",
+              "name": "dose",
+              "value": "={{ $json.Power }}",
+              "type": "string"
+            },
+            {
+              "id": "0921fc27-18a0-4d7a-998b-d826eceae1bc",
+              "name": "form",
+              "value": "={{ $json.Dosage }}",
+              "type": "string"
+            },
+            {
+              "id": "865a3ddd-9948-4b09-b50e-86fdf08f3646",
+              "name": "package",
+              "value": "={{ $json.Box }}",
+              "type": "string"
+            },
+            {
+              "id": "396bbec8-6070-4f77-9a2c-0bb77652f945",
+              "name": "quantity",
+              "value": "={{ $json['On Hand'] }}",
+              "type": "number"
+            },
+            {
+              "id": "61b458a7-fc99-47fa-8a5a-d34dedccf73f",
+              "name": "price",
+              "value": "={{ $json['Net Cost'] }}",
+              "type": "number"
+            },
+            {
+              "id": "c7e5a09c-93e2-4fdd-9d9e-106264d5a408",
+              "name": "brand",
+              "value": "={{ $json['Brand Owner'] }}",
+              "type": "string"
+            },
+            {
+              "id": "08f3ce3c-908e-4b94-88e5-2c742b8a5834",
+              "name": "barcode",
+              "value": "={{ $json.EAN }}",
+              "type": "string"
+            },
+            {
+              "id": "eb696508-743e-436b-a3d3-af8a0148621c",
+              "name": "supplier",
+              "value": "D - PharmaSource",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1440,
+        2544
+      ],
+      "id": "b37554ba-619a-4164-a719-375b7cd8356a",
+      "name": "Edit Fields7"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "A - AlShifa1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "B - MedLine1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "C - CarePlus1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "D - PharmaSource1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Create spreadsheet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create spreadsheet1": {
+      "main": [
+        [
+          {
+            "node": "كتابة النتائج1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "A - AlShifa1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "B - MedLine1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "C - CarePlus1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "D - PharmaSource1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "دمج الموردين1": {
+      "main": [
+        [
+          {
+            "node": "توحيد البيانات1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "توحيد البيانات1": {
+      "main": [
+        [
+          {
+            "node": "أفضل سعر1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "أفضل سعر1": {
+      "main": [
+        [
+          {
+            "node": "كتابة النتائج1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields4": {
+      "main": [
+        [
+          {
+            "node": "دمج الموردين1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields5": {
+      "main": [
+        [
+          {
+            "node": "دمج الموردين1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Edit Fields6": {
+      "main": [
+        [
+          {
+            "node": "دمج الموردين1",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Edit Fields7": {
+      "main": [
+        [
+          {
+            "node": "دمج الموردين1",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "89da20fe-2d27-4627-8d26-70d578ba48a0",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "ab92dcac2a1adc817b04ee231994cfb204598bfc0fc0becb82129f200777cfbf"
+  },
+  "id": "lz6dUxbyKwVPaD3C",
+  "tags": []
+}
